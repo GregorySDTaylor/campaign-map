@@ -1,0 +1,18 @@
+campaign-map-rest/HELP.md
+campaign-map-rest/.gradle
+campaign-map-rest/build/
+!campaign-map-rest/gradle/wrapper/gradle-wrapper.jar
+!campaign-map-rest/**/src/main/**/build/
+!campaign-map-rest/**/src/test/**/build/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!campaign-map-rest/**/src/main/**/out/
+!campaign-map-rest/**/src/test/**/out/
+
+### VS Code ###
+.vscode/
