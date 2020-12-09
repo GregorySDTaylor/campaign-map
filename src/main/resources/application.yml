@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: campaign-map-rest
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: org.postgresql.Driver
+  data:
+    rest:
+      base-path: rest-api
