@@ -14,5 +14,6 @@ data class Location(
         val description: String?,
         val latitude: Double?,
         val longitude: Double?,
-        val imageUrl: URL?
+        val imageUrl: URL?,
+        @ManyToOne @JoinColumn(name="controlling_faction_id") val controllingFaction: Faction,
 )
