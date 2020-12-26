@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class CampaignMapRestApplication
 
 fun main(args: Array<String>) {
-	runApplication<CampaignMapRestApplication>(*args)
+    runApplication<CampaignMapRestApplication>(*args)
 }
