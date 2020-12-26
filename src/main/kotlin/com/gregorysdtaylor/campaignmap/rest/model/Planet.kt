@@ -5,7 +5,7 @@ import javax.persistence.*
 
 @Entity
 data class Planet(
-        @Id val id: Long,
+        @Id @GeneratedValue val id: Long,
         @ManyToOne @JoinColumn(name="campaign_id") val campaign: Campaign,
         val name: String?,
         val description: String?,
