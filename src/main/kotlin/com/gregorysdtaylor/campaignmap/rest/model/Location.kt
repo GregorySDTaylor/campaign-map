@@ -12,5 +12,5 @@ data class Location(
         var latitude: Double?,
         var longitude: Double?,
         var imageUrl: URL?,
-        @ManyToOne @JoinColumn(name="controlling_faction_id") var controllingFaction: Faction,
+        @ManyToOne @JoinColumn(name="controlling_faction_id") var controllingFaction: Faction?,
 )
