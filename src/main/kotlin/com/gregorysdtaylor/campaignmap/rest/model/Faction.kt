@@ -8,10 +8,10 @@ import javax.persistence.OneToMany
 
 @Entity
 data class Faction(
-        @Id @GeneratedValue val id: Long,
-        val name: String?,
-        val description: String?,
-        val imageUrl: URL?,
-        val insigniaUrl: URL?,
-        @OneToMany(mappedBy = "controllingFaction") val controlledLocations: MutableList<Location> = mutableListOf()
+        @Id @GeneratedValue var id: Long,
+        var name: String?,
+        var description: String?,
+        var imageUrl: URL?,
+        var insigniaUrl: URL?,
+        @OneToMany(mappedBy = "controllingFaction") var controlledLocations: MutableList<Location> = mutableListOf()
 )
