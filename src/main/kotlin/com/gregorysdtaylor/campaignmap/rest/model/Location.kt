@@ -5,12 +5,12 @@ import javax.persistence.*
 
 @Entity
 data class Location(
-        @Id @GeneratedValue val id: Long,
-        @ManyToOne @JoinColumn(name="planet_id") val planet: Planet,
-        val name: String?,
-        val description: String?,
-        val latitude: Double?,
-        val longitude: Double?,
-        val imageUrl: URL?,
-        @ManyToOne @JoinColumn(name="controlling_faction_id") val controllingFaction: Faction,
+        @Id @GeneratedValue var id: Long,
+        @ManyToOne @JoinColumn(name="planet_id") var planet: Planet,
+        var name: String?,
+        var description: String?,
+        var latitude: Double?,
+        var longitude: Double?,
+        var imageUrl: URL?,
+        @ManyToOne @JoinColumn(name="controlling_faction_id") var controllingFaction: Faction,
 )
