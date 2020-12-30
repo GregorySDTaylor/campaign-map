@@ -8,8 +8,9 @@ import javax.persistence.CascadeType.ALL
 data class Campaign(
         @Id @GeneratedValue var id: Long,
         var name: String?,
-        var description: String?,
+        @Column(columnDefinition="TEXT") var description: String?,
         @OneToMany(cascade=[ALL], mappedBy = "campaign") var planets: MutableList<Planet> = mutableListOf(),
         var imageUrl: URL?,
-        var mapUrl: URL?
+        var mapUrl: URL?,
+        @OneToMany(cascade=[ALL], mappedBy = "campaign") var factions: MutableList<Faction> = mutableListOf(),
 )

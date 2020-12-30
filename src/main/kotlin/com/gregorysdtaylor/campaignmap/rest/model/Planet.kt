@@ -9,7 +9,7 @@ data class Planet(
         @Id @GeneratedValue var id: Long,
         @ManyToOne @JoinColumn(name="campaign_id") var campaign: Campaign,
         var name: String?,
-        var description: String?,
+        @Column(columnDefinition="TEXT") var description: String?,
         var diameterInKm: Double?,
         @OneToMany(cascade=[ALL], mappedBy = "planet") var locations: MutableList<Location> = mutableListOf(),
         var imageUrl: URL?,
