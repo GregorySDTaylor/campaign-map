@@ -7,7 +7,7 @@ import javax.persistence.*
 data class Faction(
         @Id @GeneratedValue var id: Long,
         var name: String?,
-        var description: String?,
+        @Lob var description: String?,
         var imageUrl: URL?,
         var insigniaUrl: URL?,
         @OneToMany(mappedBy = "controllingFaction") var controlledLocations: MutableList<Location> = mutableListOf(),
