@@ -11,5 +11,6 @@ data class Campaign(
         var description: String?,
         @OneToMany(cascade=[ALL], mappedBy = "campaign") var planets: MutableList<Planet> = mutableListOf(),
         var imageUrl: URL?,
-        var mapUrl: URL?
+        var mapUrl: URL?,
+        @OneToMany(cascade=[ALL], mappedBy = "campaign") var factions: MutableList<Faction> = mutableListOf(),
 )
