@@ -10,7 +10,7 @@ class RestConfiguration: RepositoryRestConfigurer {
 
     override fun configureRepositoryRestConfiguration(config: RepositoryRestConfiguration, cors: CorsRegistry) {
         cors.addMapping("/**")
-            .allowedOrigins("http://localhost:8080")
+            .allowedOrigins("http://localhost:8080", "https://campaign-map-vue2.herokuapp.com")
             .allowedMethods("*")
             .allowedHeaders("*")
     }
